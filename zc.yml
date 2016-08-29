@@ -1,0 +1,7 @@
+---
+- name: Install and configure the Z-Cluster
+  hosts: zc
+  remote_user: zcadmin
+
+  roles:
+    - common

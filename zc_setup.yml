@@ -1,0 +1,12 @@
+---
+
+- hosts: zc
+  user: pi
+  become: true
+  become_method: sudo
+  include: vault.yml
+  
+  tasks:
+    - name: Create zcadmin user    
+      action: user name=zcadmin password="{{ zcadmin_user_password }}" groups=sudo
+      
