@@ -1,0 +1,13 @@
+---
+- name: Update and upgrade system
+  apt: upgrade=yes update_cache=yes
+
+- name: Install htop
+  apt: name=htop state=latest update_cache=yes
+
+- name: Install iotop
+  apt: name=iotop state=latest update_cache=yes
+
+- name: Configure sshd_config
+  template: src=sshd_config.j2 dest=/etc/ssh/sshd_config
+  notify: reload sshd

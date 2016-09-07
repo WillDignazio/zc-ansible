@@ -1,0 +1,6 @@
+---
+# Vault variables
+pi_password: "{{ vault_pi_password }}"
+zcadmin_user_password: "{{ vault_zcadmin_user_password }}"
+zcadmin_private_key: "{{ vault_zcadmin_private_key }}"
+zcadmin_public_key: "{{ vault_zcadmin_public_key }}"
